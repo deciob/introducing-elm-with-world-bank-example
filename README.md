@@ -1,2 +1,15 @@
-# world-bank-example
-A simple elm exercise using the World Bank API
+# Introducing Elm: the language and architecture for web development
+
+This repository contains the material for the 22nd of March [elm cambridge meetup](https://www.meetup.com/elm-cambridge/events/248132273/).
+
+* **Introduction.md** is a brief overview of the Elm programming language.
+
+* **Main.elm** is a variation of the [elm http example] from the elm website. It makes some random requests to the World Bank public data api.
+
+* **MainTODO.elm** is just a sckeleton of Main.elm that compiles, but does nothing. This can be the starting point to get your hands dirty on elm. This is just a suggestion, a starting point and you do not need to follow what's in **Main.elm**.
+
+
+You can either install elm on your laptop with npm and run MainTODO.elm with elm-reactor or alternatively use [Ellie](https://ellie-app.com/new).
+
+
+
