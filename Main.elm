@@ -1,10 +1,12 @@
 module Main exposing (main)
 
+import Dict exposing (Dict)
 import Html exposing (..)
 import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
 import Json.Decode as Decode
+import Random
 
 
 main =
@@ -29,17 +31,24 @@ type alias IndicatorDatum =
 
 
 type alias Model =
-    { indicator : String
+    { currentIdx : Maybe Int
+    , currentIndicatorName : String
     , data : List IndicatorDatum
     }
 
 
+indicatorIds : Dict Int String
+indicatorIds =
+    Dict.fromList [ ( 0, "EG.FEC.RNEW.ZS" ), ( 1, "EG.ELC.PETR.ZS" ), ( 2, "EG.ELC.ACCS.RU.ZS" ) ]
+
+
 init : ( Model, Cmd Msg )
 init =
-    ( { indicator = "EG.FEC.RNEW.ZS"
+    ( { currentIdx = Nothing
+      , currentIndicatorName = ""
       , data = []
       }
-    , Cmd.none
+    , Random.generate NewIndex (Random.int 0 2)
     )
 
 
@@ -50,13 +59,15 @@ init =
 type Msg
     = RequestData
     | NewData (Result Http.Error (List IndicatorDatum))
+    | NewIndex Int
+    | GenerateRandomIdx
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         RequestData ->
-            ( model, getData model.indicator )
+            ( model, Random.generate NewIndex (Random.int 0 2) )
 
         NewData (Ok data) ->
             ( { model | data = data }, Cmd.none )
@@ -67,6 +78,16 @@ update msg model =
                     Debug.log "error" error
             in
             ( model, Cmd.none )
+
+        GenerateRandomIdx ->
+            ( model, Random.generate NewIndex (Random.int 0 2) )
+
+        NewIndex index ->
+            let
+                indicator =
+                    indicatorIds |> Dict.get index |> Maybe.withDefault ""
+            in
+            ( { model | currentIdx = Just index }, getData indicator )
 
 
 
@@ -84,10 +105,13 @@ view model =
 
                 Nothing ->
                     "-"
+
+        currentIdx =
+            Maybe.withDefault 0 model.currentIdx
     in
     div []
-        [ h2 [] [ text model.indicator ]
-        , button [ onClick RequestData ] [ text "Request Data!" ]
+        [ h2 [] [ text (indicatorIds |> Dict.get currentIdx |> Maybe.withDefault "") ]
+        , button [ onClick GenerateRandomIdx ] [ text "Request Data From a random indicator!" ]
         , div [ class "data" ]
             [ ul [] <|
                 List.map
