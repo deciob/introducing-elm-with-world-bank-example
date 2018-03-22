@@ -11,7 +11,7 @@
   * Unit tests are still important. The compiler will avoid formal errors, but can not guess what you are trying to do!
   
 * **Immutable data**
-  * In JavaScript it can sometimes be handy to mutate the data, but this can open up to unespected and nasty bugs, and sometimes it is even difficult to tell if you actually mutating the data or not.
+  * In JavaScript it can sometimes be handy to mutate the data, but this can open up to unespected and nasty bugs, and sometimes it is even difficult to tell if you are actually mutating the data or not.
   * Forcing immutability in JavaScript in a consistent and efficient way is possible (see for example [immutable.js](https://facebook.github.io/immutable-js/)), but it's one more thing to know about and it's easy to back out of it in any moment.
   * Whith elm you get immutable data out of the box.
   
