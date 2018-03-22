@@ -36,3 +36,5 @@
 * **UPDATE**: a whay to update the state
 
 The update and the view functions are never called directly within our application. Instead we sent messages and commands to the elm runtime. [Redux](https://redux.js.org/introduction) is inspired by the elm architecture
+
+[The elm architecture flow]: https://github.com/deciob/introducing-elm-with-world-bank-example/blob/master/elm-architecture-flow.jpg "The elm architecture flow"
