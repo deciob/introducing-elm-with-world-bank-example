@@ -12,8 +12,8 @@
   
 * **Immutable data**
   * In JavaScript it can sometimes be handy to mutate the data, but this can open up to unespected and nasty bugs, and sometimes it is even difficult to tell if you actually mutating the data or not.
-  * Forcing immutability in JavaScript in a consistent and efficient way is possible (see for example [immutable.js](https://facebook.github.io/immutable-js/), but it becomes something more to learn and to keep track of in your code, plus it is easy to back out in any moment.
-  * Whith elm you have no alternatives and you have immutable data out of the box.
+  * Forcing immutability in JavaScript in a consistent and efficient way is possible (see for example [immutable.js](https://facebook.github.io/immutable-js/)), but it's one more thing to know about and it's easy to back out of it in any moment.
+  * Whith elm you get immutable data out of the box.
   
 * **Pure functions**
   * All side effects are managed by the elm runtime through commands.
@@ -21,12 +21,12 @@
   * This also makes testing very easy.
   
 * **You can introduce elm into your app progressively**
-  * No need to make a big commitment at the beginning. You can try it out on small parts of your application and see how it works out for you.
+  * No need to make a big commitment at the beginning. You can try it out on small parts of your application and see how it works out.
   * Elm can also communicate with JavaScript via ports. Handy if you need some functionality from an external JavaScript library.
   
 * **Elm will make you a better JavaScript programmer**
-  * Makes you more disciplined 
-  * Helps you to better realize some JavaScript pitfalls
+  * Helps you to be more disciplined 
+  * Helps you to better understand some of JavaScript worst pitfalls
 
 
 
