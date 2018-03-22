@@ -2,7 +2,7 @@
 
 This repository contains the material for the 22nd of March [elm cambridge meetup](https://www.meetup.com/elm-cambridge/events/248132273/).
 
-* **Introduction.md** is a brief overview of the Elm programming language.
+* [Introduction.md](https://github.com/deciob/introducing-elm-with-world-bank-example/blob/master/Introduction.md) is a brief overview of the Elm programming language.
 
 * **Main.elm** is a variation of the [elm http example](http://elm-lang.org/examples/http) from the elm website. It makes some random requests to the World Bank public data api.
 
