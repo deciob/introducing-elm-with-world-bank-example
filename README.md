@@ -4,7 +4,7 @@ This repository contains the material for the 22nd of March [elm cambridge meetu
 
 * **Introduction.md** is a brief overview of the Elm programming language.
 
-* **Main.elm** is a variation of the [elm http example] from the elm website. It makes some random requests to the World Bank public data api.
+* **Main.elm** is a variation of the [elm http example](http://elm-lang.org/examples/http) from the elm website. It makes some random requests to the World Bank public data api.
 
 * **MainTODO.elm** is just a sckeleton of Main.elm that compiles, but does nothing. This can be the starting point to get your hands dirty on elm. This is just a suggestion, a starting point and you do not need to follow what's in **Main.elm**.
 
