@@ -35,5 +35,4 @@
 * **VIEW**: a whay to view the state as HTML
 * **UPDATE**: a whay to update the state
 
-* The update and the view functions are never called directly within our application. Instead we sent messages and commands to the elm runtime.
-* [Redux](https://redux.js.org/introduction) is inspired by the elm architecture
+The update and the view functions are never called directly within our application. Instead we sent messages and commands to the elm runtime. [Redux](https://redux.js.org/introduction) is inspired by the elm architecture
