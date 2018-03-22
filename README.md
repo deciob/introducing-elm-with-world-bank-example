@@ -11,5 +11,7 @@ This repository contains the material for the 22nd of March [elm cambridge meetu
 
 You can either install elm on your laptop with npm and run MainTODO.elm with elm-reactor or alternatively use [Ellie](https://ellie-app.com/new).
 
+For more information about the World Bank open data API have a look at the links in **resourses.md**.
+
 
 
