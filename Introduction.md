@@ -29,6 +29,7 @@
   * Helps you to better realize some JavaScript pitfalls
 
 
+
 ### The elm architecture
 
 * **MODEL**: the state of your application
@@ -39,6 +40,6 @@ The update and the view functions are never called directly within our applicati
 
 [Redux](https://redux.js.org/introduction) is inspired by the elm architecture
 
-This is a representation of the elm architecture flow from the [http example](http://elm-lang.org/examples/http) on the elm website. The main entry point is [Html.program](http://package.elm-lang.org/packages/elm-lang/html/2.0.0/Html#program) and the init function passes an initial state and a command to send an http request.
+This is a representation of the elm architecture flow from the [http example](http://elm-lang.org/examples/http) on the elm website. The main entry point is [Html.program](http://package.elm-lang.org/packages/elm-lang/html/2.0.0/Html#program) and the init function passes both an initial state and a command.
 
 ![The elm architecture flow](https://github.com/deciob/introducing-elm-with-world-bank-example/blob/master/elm-architecture-flow.jpg)
